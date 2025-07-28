@@ -16,3 +16,12 @@ average_per_student = np.mean(marks, axis=1)
 print("\nAverage marks per student:")
 for i, avg in enumerate(average_per_student, start=1):
     print(f"Student {i}: {avg:.2f}")
+
+# calculate average mark per subject (mean across rows, axis=0)
+average_per_subject = np.mean(marks, axis=0)
+
+subjects = ["Math", "English", "Science"]
+
+print("\nAverage marks per subject:")
+for subject, avg in zip(subjects, average_per_subject):
+    print(f"{subject}: {avg:.2f}")
